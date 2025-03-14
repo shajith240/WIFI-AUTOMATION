@@ -1,0 +1,15 @@
+# Virtual Environment
+venv/
+__pycache__/
+*.pyc
+
+# Sensitive Information
+config.ini
+
+# Windows specific
+*.bat
+*.vbs
+
+# IDE specific
+.vscode/
+.idea/

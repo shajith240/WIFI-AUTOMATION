@@ -1,0 +1,4 @@
+selenium
+configparser
+requests
+webdriver-manager
