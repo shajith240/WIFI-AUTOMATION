@@ -7,13 +7,24 @@ Automated WiFi login system for ISM-Campus-Wi-Fi network.
 - Chrome browser installed (for Selenium automation)
 
 ## Setup
-1. Clone the repository
-2. Create a virtual environment: `python -m venv venv`
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/shajith240/WIFI-AUTOMATION.git
+   ```
+2. Create a virtual environment:
+   ```bash
+   python -m venv venv
+   ```
 3. Activate the virtual environment:
    - Windows: `venv\Scripts\activate`
    - Linux/Mac: `source venv/bin/activate`
-4. Install dependencies: `pip install -r requirements.txt`
-5. Create a `config.ini` file with your credentials:
+4. Install dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
+5. Set up configuration:
+   - Copy `config.ini.template` to `config.ini`
+   - Edit `config.ini` and update with your credentials:
    ```ini
    [WiFi]
    login_url = https://wifilogin.iitism.ac.in/
@@ -26,6 +37,7 @@ Automated WiFi login system for ISM-Campus-Wi-Fi network.
 
 ## Usage
 Run `python wifi_login_automation.py` to start the automation.
+
 ## Troubleshooting
 - If you encounter WebDriver issues, ensure Chrome browser is up to date
 - The script automatically manages ChromeDriver through webdriver-manager
