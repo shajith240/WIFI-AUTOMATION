@@ -1,73 +1,77 @@
-# WiFi Login Automation
+# WiFi Login Automation for ISM Campus
 
-Automated WiFi login system for ISM-Campus-Wi-Fi network.
+Hey there! 👋 Tired of manually logging into ISM-Campus-Wi-Fi every time? This script has got you covered! It automatically handles the login process, so you can focus on what matters.
 
-## Prerequisites
-- Python 3.x
-- Chrome browser installed (for Selenium automation)
+## What does it do?
+- Automatically connects to ISM-Campus-Wi-Fi
+- Handles the login process in the background
+- Runs silently when you start your PC
+- Keeps you connected throughout the day
 
-## Setup
-1. Clone the repository:
+## Getting Started 🚀
+
+### You'll need:
+- Python 3.x installed on your PC
+- Chrome browser
+- A few minutes to set things up
+
+### Quick Setup:
+1. Get the code:
    ```bash
    git clone https://github.com/shajith240/WIFI-AUTOMATION.git
+   cd WIFI-AUTOMATION
    ```
-2. Create a virtual environment:
+
+2. Set up Python environment (copy-paste these commands):
    ```bash
    python -m venv venv
-   ```
-3. Activate the virtual environment:
-   - Windows: `venv\Scripts\activate`
-   - Linux/Mac: `source venv/bin/activate`
-4. Install dependencies:
-   ```bash
+   venv\Scripts\activate  # for Windows
    pip install -r requirements.txt
    ```
-5. Set up configuration:
-   - Copy `config.ini.template` to `config.ini`
-   - Edit `config.ini` and update with your credentials:
+
+3. Create your config file:
+   - Copy `config.ini.template` and rename it to `config.ini`
+   - Open it and put in your WiFi credentials:
    ```ini
    [WiFi]
    login_url = https://wifilogin.iitism.ac.in/
    ssid = ISM-Campus-Wi-Fi
 
    [Credentials]
-   username = your_username
-   password = your_password
+   username = your_username    # Replace with your username
+   password = your_password    # Replace with your password
    ```
 
-## Usage
-Run `python wifi_login_automation.py` to start the automation.
+### Make it run on startup (Windows) 🔄
+Want it to work automatically when you turn on your PC? Here's how:
 
-## Auto-start Setup (Windows)
-To make the script run automatically when Windows starts:
+1. Find `start_hidden.vbs` in the project folder
+2. Right-click → Create shortcut
+3. Press `Win + R`, type `shell:startup`, and hit Enter
+4. Move the shortcut to this startup folder
+5. That's it! It'll run automatically next time you start your PC
 
-1. Create a shortcut to `start_hidden.vbs`:
-   - Right-click on `start_hidden.vbs`
-   - Select "Create shortcut"
+### How to check if it's running? 🔍
+Just double-click `check_status.bat` - it'll show you if the script is active.
 
-2. Move the shortcut to Windows Startup folder:
-   - Press `Win + R`
-   - Type `shell:startup`
-   - Press Enter
-   - Move the created shortcut to this folder
+## Having Problems? 🤔
 
-3. Verify the setup:
-   - Restart your PC
-   - The script will run automatically in the background
-   - To check if it's running:
-     - Run `check_status.bat`
-     - Look for `pythonw.exe` in the list
+Try these quick fixes:
+- Make sure Chrome is up to date
+- Double-check your username and password in `config.ini`
+- Restart your PC if it's acting weird
+- Still stuck? Open an issue on GitHub!
 
-## Troubleshooting
-- If you encounter WebDriver issues, ensure Chrome browser is up to date
-- The script automatically manages ChromeDriver through webdriver-manager
-- If auto-start isn't working:
-  - Check if the paths in `start_hidden.vbs` match your installation
-  - Ensure the virtual environment is properly set up
-  - Verify all dependencies are installed
-  - Check Windows Task Manager for any error messages
+## Pro Tips 💡
+- Keep your `config.ini` safe - it has your login info!
+- The script runs silently, so don't worry if you don't see anything
+- Check Task Manager if you want to see it running (look for `pythonw.exe`)
 
-## Important Files
-- `start_hidden.vbs`: Script to run the automation silently in background
-- `check_status.bat`: Utility to verify if the automation is running
-- `config.ini`: Your configuration file (create from template)
+## Want to Help? 🤝
+Found a bug? Have a cool idea? Feel free to:
+- Open an issue
+- Submit a pull request
+- Share it with your friends!
+
+---
+Made with ☕ by a fellow ISM student who was tired of logging in manually!
