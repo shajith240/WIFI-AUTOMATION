@@ -1,0 +1,7 @@
+[WiFi]
+login_url = https://wifilogin.iitism.ac.in/
+ssid = ISM-Campus-Wi-Fi
+
+[Credentials]
+username = your_username
+password = your_password
