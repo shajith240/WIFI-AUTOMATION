@@ -5,11 +5,13 @@ __pycache__/
 
 # Sensitive Information
 config.ini
-
-# Windows specific
-*.bat
-*.vbs
+*.log
 
 # IDE specific
 .vscode/
 .idea/
+# Windows specific - exclude all but our scripts
+*.bat
+!check_status.bat
+*.vbs
+!start_hidden.vbs
